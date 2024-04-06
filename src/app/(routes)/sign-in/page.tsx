@@ -15,7 +15,8 @@ export default function Page() {
     try {
       await signIn('credentials', {
         email,
-        password
+        password,
+        callbackUrl: '/orders'
       });
     } catch (error) {
       console.error('Error de inicio de sesión:', error);
