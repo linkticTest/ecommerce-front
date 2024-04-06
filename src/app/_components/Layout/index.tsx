@@ -37,11 +37,11 @@ export default function Layout({
                     </nav>
                 </div>
             </aside>
-            <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden">
+            <div className="relative flex flex-1 flex-col overflow-y-auto overflow-x-hidden z-[9]">
                 <header className="sticky top-0 z-999 flex w-full bg-white drop-shadow-1 dark:bg-boxdark dark:drop-shadow-none">
                     <Header />
                 </header>
-                <main className="relative m-5 z-[-1]">
+                <main className="relative m-5 z-[-1] pb-10">
                     {children}
                 </main>
             </div>

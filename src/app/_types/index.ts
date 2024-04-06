@@ -1,7 +1,9 @@
 export type Product = {
-    id: string;
+    id: number;
     name: string;
     price: number;
+    create_dt: string;
+    category: string;
 };
 
 export type Order = {
