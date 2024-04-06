@@ -13,13 +13,4 @@ export const PRODUCT_MOCK_LIST = [
     },
 ]
 
-export const ORDERS_MOCK_LIST =  [
-    {
-        id: '1',
-        created: new Date('2024-04-01'),
-        updated: new Date('2024-04-01'),
-        products: PRODUCT_MOCK_LIST,
-        status: 'Pendiente',
-        userId: 1,
-    }
-] as Order[];
+export const ORDERS_MOCK_LIST =  [] as Order[];
