@@ -1,4 +1,4 @@
-# MS Catalog
+# ecommerce-front
 
 This is the front layer of the Catalog made with ReactJS
 
