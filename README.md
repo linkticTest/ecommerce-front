@@ -45,7 +45,7 @@ For CI/CD flow, Vercel was used, which supports us in building the project
 
 `.github/workflows/lambda.yml` 
 
-## How to execute the lambda locally:
+## Git Best practices
 
 Commits
 
