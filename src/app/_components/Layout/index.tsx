@@ -13,8 +13,8 @@ export default function Layout({
         <div className="flex h-screen overflow-hidden">
             <aside className="absolute left-0 top-0 z-9999 flex h-screen w-72 flex-col overflow-y-hidden bg-black duration-300 ease-linear dark:bg-boxdark lg:static lg:translate-x-0 -translate-x-full">
                 <div className="flex items-center justify-between gap-2 px-6 py-5 lg:py-6.5">
-                    <a href="">
-                        <img src="https://demo.tailadmin.com/src/images/logo/logo.svg" alt="" />
+                    <a href="" className="text-white font-bold text-3xl">
+                        OrdersApp
                     </a>
                 </div>
                 <div className="no-scrollbar flex flex-col overflow-y-auto duration-300 ease-linear">

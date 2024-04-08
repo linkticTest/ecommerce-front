@@ -9,8 +9,11 @@ export type Product = {
 };
 
 export type Order = {
-    id: string;
-    created: Date;
+    idOrder: string;
+    createDt: string;
+    userDTO: {
+        firstName: string;
+    }
     updated: Date;
     products: Product[];
     status: string;

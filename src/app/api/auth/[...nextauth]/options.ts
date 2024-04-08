@@ -1,3 +1,4 @@
+import { USERSMOCK } from "@/app/_mocks";
 import CredentialsProvider from "next-auth/providers/credentials"
 
 export const authOptions = {
@@ -12,12 +13,14 @@ export const authOptions = {
                 password: { label: 'Password', type: 'password' },
             },
             async authorize(credentials) {
-                if (credentials?.email === 'betobustamante.ef@gmail.com') {
+                // @TODO: Implement user login with credentials
+                if (credentials?.email === USERSMOCK.USER && 
+                    credentials?.password === USERSMOCK.PWD) {
                     return {
-                        id: '1',
-                        name: '',
-                        email: 'betobustamante.ef@gmail.com',
-                        image: '1'
+                        id: USERSMOCK.ID,
+                        name: USERSMOCK.NAME,
+                        email: USERSMOCK.USER,
+                        image: ''
                     };
                 }
                 return null;

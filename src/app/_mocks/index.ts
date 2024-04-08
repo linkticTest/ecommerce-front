@@ -13,4 +13,11 @@ export const PRODUCT_MOCK_LIST = [
     },
 ]
 
+export const USERSMOCK = {
+    ID: 'id',
+    USER: 'betobustamante.ef@gmail.com',
+    NAME: 'Eduardo Bustamante',
+    PWD: '123456'
+}
+
 export const ORDERS_MOCK_LIST =  [] as Order[];
