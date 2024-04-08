@@ -29,6 +29,18 @@ required for next auth https://next-auth.js.org/
 
 * `npm install`          Install Project Dependencies
 
+
+## Credentials
+
+The authentication model was not implemented from the server side, however, in order to enter, mock users were created for testing purposes.
+
+`
+    {
+        USER: 'betobustamante.ef@gmail.com',
+        PWD: '123456'
+    }
+`
+
 ## How to run the lambda locally:
 
 Run the development server
