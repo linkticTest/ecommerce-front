@@ -1,6 +1,7 @@
 // Libs
 import { useEffect, useState } from 'react';
 import { Product } from '../_types';
+import { API_URL } from '../_constants';
 // Store
 
 const useProducts = () => {
@@ -10,7 +11,7 @@ const useProducts = () => {
   const getData = async (): Promise<Product[]> => {
     setIsLoading(true);
     try {
-      const response = await fetch('https://ui1tqtn6t6.execute-api.us-east-2.amazonaws.com/dev/api/products');
+      const response = await fetch(`${API_URL}/dev/api/products`);
       const dataJson = await response.json();
       setProducts(dataJson.body);
       return dataJson;

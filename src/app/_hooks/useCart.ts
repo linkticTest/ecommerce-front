@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Swal from 'sweetalert2'
 import withReactContent from 'sweetalert2-react-content'
+import { API_URL } from '../_constants';
 
 const useCart = () => {
   const [productsInCart, setProductsInCart] = useState<number[]>([]);
@@ -19,6 +20,27 @@ const useCart = () => {
     ]))
   }
 
+  const createOrderRequest = async () => {
+
+    const requestOptions = {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        products: productsInCart,
+        token: "85441750"
+      })
+    };
+
+    try {
+      const response = await fetch(`${API_URL}/dev/api/orders`, requestOptions);
+      const dataJson = await response.json();
+      return dataJson;
+
+    } catch (error) {
+      throw error;
+    }
+  }
+
   const createOrder = async () => {
     try {
       MySwal.fire({
@@ -28,7 +50,9 @@ const useCart = () => {
         },
       });
 
-      setTimeout(() => {
+      const createOrderResponse = await createOrderRequest();
+
+      if (createOrderResponse.idOrder) {
         MySwal.fire({
           icon: 'success',
           title: 'Orden Creada',
@@ -37,12 +61,12 @@ const useCart = () => {
             window.location.href = '/orders';
           }
         });
-      }, 2000)
+      }
 
     } catch (error) {
       MySwal.fire({
-        icon: 'success',
-        title: 'Orden Creada',
+        icon: 'error',
+        title: 'Ha ocurrido un error al crear la orden',
       });
     }
   }

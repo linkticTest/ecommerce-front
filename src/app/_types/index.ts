@@ -1,4 +1,6 @@
 export type Product = {
+    created: string;
+    id_product: number;
     id: number;
     name: string;
     price: number;

@@ -65,7 +65,7 @@ export default function Page() {
                             products?.map((product, index) => (
                                 <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700" key={index}>
                                     <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                        {product?.id}
+                                        {product?.id_product}
                                     </th>
                                     <td className="px-6 py-4">
                                         {product.name}
@@ -77,15 +77,15 @@ export default function Page() {
                                         {product?.price}
                                     </td>
                                     <td className="px-6 py-4">
-                                        {product?.create_dt}
+                                        {product?.created}
                                     </td>
                                     <th className="px-6 py-4 text-center">
-                                        {isProductInCart(product.id) ? (<>
-                                            <div className="cursor-pointer" onClick={() => removeProductFromCart(product.id)}>
+                                        {isProductInCart(product.id_product) ? (<>
+                                            <div className="cursor-pointer" onClick={() => removeProductFromCart(product.id_product)}>
                                                 <Remove />
                                             </div>
                                         </>) : <>
-                                            <div className="cursor-pointer" onClick={() => addToCart(product.id)}>
+                                            <div className="cursor-pointer" onClick={() => addToCart(product.id_product)}>
                                                 <Cart />
                                             </div>
                                         </>}
